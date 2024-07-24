@@ -1,6 +1,7 @@
 package com.SpringCRUD.SpringCRUDApp.CustomerController;
 
 //Annotation import libraries
+import com.SpringCRUD.SpringCRUDApp.DTO.CustomerDTO;
 import org.springframework.web.bind.annotation.*;
 
 //Annotations
