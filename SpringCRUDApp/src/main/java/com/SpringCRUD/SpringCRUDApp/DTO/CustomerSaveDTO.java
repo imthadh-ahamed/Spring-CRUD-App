@@ -1,38 +1,17 @@
-package com.SpringCRUD.SpringCRUDApp.Entity;
+package com.SpringCRUD.SpringCRUDApp.DTO;
 
-import jakarta.persistence.*;
-
-@Table(name = "customer")
-public class Customer {
-    @Id
-    @Column(name = "customer_id", length = 10)
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int customerID;
-
-    @Column(name = "customer_name", length = 30)
+public class CustomerSaveDTO {
     private String customerName;
-
-    @Column(name = "customer_address", length = 50)
     private String customerAddress;
-    @Column(name = "customer_mobile", length = 12)
     private int mobileNo;
 
-    public Customer(String customerName, String customerAddress, int mobileNo) {
-        this.customerID = customerID;
+    public CustomerSaveDTO(String customerName, String customerAddress, int mobileNo) {
         this.customerName = customerName;
         this.customerAddress = customerAddress;
         this.mobileNo = mobileNo;
     }
 
-    public Customer() {
-    }
-
-    public int getCustomerID() {
-        return customerID;
-    }
-
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
+    public CustomerSaveDTO() {
     }
 
     public String getCustomerName() {
@@ -61,11 +40,11 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "customerID=" + customerID +
+        return "CustomerDTO{" +
                 ", customerName='" + customerName + '\'' +
                 ", customerAddress='" + customerAddress + '\'' +
                 ", mobileNo=" + mobileNo +
                 '}';
     }
+
 }
